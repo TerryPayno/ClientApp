@@ -1,0 +1,48 @@
+
+<!--<mat-grid-list cols="2" rowHeight="100px">
+  <mat-grid-tile [colspan]="1">
+    <mat-grid-list cols="4" rowHeight="100px">
+      <mat-grid-tile *ngFor="let tile of tiles"
+                     [colspan]="tile.cols"
+                     [rowspan]="tile.rows">
+        <img [src]="myvar" />
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="1">
+    <p>Where will I be?</p>
+  </mat-grid-tile>
+</mat-grid-list>-->
+
+
+<h1>{{Car.Title}}</h1>
+<h2>{{Car.SubTitle}}</h2>
+
+  <div class="row" style="margin-left:2%">
+    <div class="col-6">
+      <div>
+        <img [src]="Car.Img" />
+      </div>
+      <div class="row" style="margin-top:1%">
+        <button (click)="PrevImg()">Prev</button>
+        <div class="col-3" *ngFor="let img of subimg; let i = index"><a (click)="test(i)"><img *ngIf="i<max && i>min" [src]="img" /></a></div>
+        <button (click)="NextImg()">next</button>
+      </div>
+
+    </div>
+    <div class="col">
+      <div class="row">
+        <div class="col">
+          <p>{{Car.Details}}</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <p>{{Car.SubDetails}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
